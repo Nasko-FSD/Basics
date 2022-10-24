@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Calculator";
+}
+
+<h2>Sumator</h2>
+
+
+<form method="post" action="/home/calculate">
+    <input name="num1" type="number" value="@ViewBag.num1" />
+    +
+    <input name="num2" type="number" value="@ViewBag.num2" />
+    =
+    <input name="sum" type="text" readonly="readonly" value="@ViewBag.sum" />
+    <input id="submit" type="submit" value="Сметни" />
+</form>
