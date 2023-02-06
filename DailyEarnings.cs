@@ -1,0 +1,13 @@
+﻿Console.Write("Enter the amount of working days per month: ");
+int workdays = int.Parse(Console.ReadLine());
+Console.Write("Enter the amount of earnings per day: ");
+double dailyEarnings = double.Parse(Console.ReadLine());
+Console.Write("Enter the rate exchange for BGN to Dollar: ");
+double currencyRate = double.Parse(Console.ReadLine());
+double monthSalary = workdays * dailyEarnings;
+double SalaryPerYear = (monthSalary * 12) + (monthSalary * 2.5);
+double taxes = 0.25 * SalaryPerYear;
+double NetSalary = SalaryPerYear - taxes;
+double salaryInLeva = NetSalary * currencyRate;
+double average = salaryInLeva / 365;
+Console.WriteLine("The average amount of money earned per days are: " + Math.Round(average, 2));
