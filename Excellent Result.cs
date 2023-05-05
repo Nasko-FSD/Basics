@@ -3,3 +3,7 @@ if(grade >= 5.50)
 {
     Console.WriteLine("Excellent!");
 }
+else
+{
+    Console.WriteLine("Not excellent");
+}
