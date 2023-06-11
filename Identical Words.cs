@@ -2,7 +2,7 @@
 string word1 = (Console.ReadLine());
 Console.Write("Enter your second word: ");
 string word2 = (Console.ReadLine());
-if (word1.ToLower() == word2.ToLower())
+if (word1.Equals(word2, StringComparison.OrdinalIgnoreCase))
 {
     Console.WriteLine("yes");
 }
