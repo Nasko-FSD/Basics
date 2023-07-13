@@ -1,4 +1,4 @@
-﻿Console.Write("Enter the of projection: ");
+﻿Console.Write("Enter the type of projection: ");
 var projection = (Console.ReadLine()).ToLower();
 Console.Write("Enter the number of rows: ");
 var rows = int.Parse(Console.ReadLine());
