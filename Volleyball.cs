@@ -4,13 +4,11 @@ Console.Write("Enter the number of holidays that aren't Saturdays or Sundays: ")
 double holidays = double.Parse(Console.ReadLine());
 Console.Write("Enter the number of weekends on which Vladi travels to his home town: ");
 double weekendsHome = double.Parse(Console.ReadLine());
-double playholidays = holidays * (2.0/3);
-double playweekends = (48 - weekendsHome) * (3.0/4);
-double totalgames = playholidays + weekendsHome + playweekends;
+double playinSofia = ((48 - weekendsHome) * 3.0/4) + (holidays * 2.0 / 3);
+double totalgames = playinSofia + weekendsHome;
 if ( year == "leap")
 {
-    totalgames += totalgames * 0.15;
-    Console.WriteLine(Math.Floor(totalgames));
+    Console.WriteLine(Math.Floor((totalgames * 0.15) + totalgames));
 }
 else if ( year == "normal")
 {
