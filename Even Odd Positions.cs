@@ -1,6 +1,6 @@
-﻿//Console.Write("Enter how many numbers you'r gonna enter: ");
+﻿Console.Write("Enter how many numbers you'r gonna enter: ");
 var n = int.Parse(Console.ReadLine());
-//Console.WriteLine("Enter {0} numbers: ", n);
+Console.WriteLine("Enter {0} numbers: ", n);
 double EvenSum = 0;
 double OddSum = 0;
 double EvenMax = double.MinValue;
@@ -9,7 +9,7 @@ double OddMax = double.MinValue;
 double OddMin = double.MaxValue;
 for (int i = 1; i <= n; i++)
 {
-    //Console.Write("num {0}= ", i);
+    Console.Write("num {0}= ", i);
     double num = double.Parse(Console.ReadLine());
     if (i % 2 == 0 && num > EvenMax)
     {
