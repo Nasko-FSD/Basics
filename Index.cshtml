@@ -1,19 +1,37 @@
 ﻿@{
-    ViewBag.Title = "Rating";
+    ViewBag.Title = "Game Play";
 }
 
-<h1>Rating</h1>
+<h2>Game Play</h2>
 
-<form action="/Home/DrawRating">
-    <input type="number" min="0" max="100" name="rating" 
-           value="@ViewBag.Rating" />
-    <input type="submit" value="Rate" />
-</form>
+    <form action="/Home/FireTop">
+        <input type="range" name="position" min="0" max="100" />
+        <input type="submit" value="Fire Top" />
+    </form>
 
-<br/>
+    <form action="/Home/FireBottom">
+        <input type="range" name="position" min="0" max="100" />
+        <input type="submit" value="Fire Bottom" />
+    </form>
 
-Rating: @ViewBag.Rating
-
-<br />
-
-@Html.Raw(ViewBag.Stars)
+    <form action="/Home/Reset">
+        <input type="submit" value="New Game" />
+    </form>
+@if (ViewBag.gameOver)
+{
+    <h2>Game Over!</h2>
+    <img src="~/images/explosion.png" />
+}
+else
+{
+    <h2>Battle Field</h2>
+    for (int row = 0; row < ViewBag.rowsCount; row++)
+    {
+        for (int col = 0; col < ViewBag.colsCount; col++)
+        {
+            <img src='/images/@(ViewBag.fruits[row, col]).png' />
+        }
+        <br />
+    }
+    <h2>Score: <b>@ViewBag.score</b></h2>
+}
