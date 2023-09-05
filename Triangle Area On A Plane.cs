@@ -1,0 +1,16 @@
+﻿Console.Write("Enter side x1: ");
+var x1 = int.Parse(Console.ReadLine());
+Console.Write("Enter side y1: ");
+var y1 = int.Parse(Console.ReadLine());
+Console.Write("Enter side x2: ");
+var x2 = int.Parse(Console.ReadLine());
+Console.Write("Enter side y2: ");
+var y2 = int.Parse(Console.ReadLine());
+Console.Write("Enter side x3: ");
+var x3 = int.Parse(Console.ReadLine());
+Console.Write("Enter side y3: ");
+var y3 = int.Parse(Console.ReadLine());
+var side = Math.Abs(x2 - x3);
+var height = Math.Abs(y2 - y1);
+var area = (side * height) / 2.0;
+Console.WriteLine("The area is:{0}", area);
