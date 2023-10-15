@@ -3,7 +3,6 @@ var lefthyphens = 3 * n;
 var innerhypens = 1;
 var righthyphens = ((5 * n) - (3 * n) - 2);
 Console.WriteLine("{0}**{1}", new string('-', lefthyphens), new string('-', righthyphens));
-//righthyphens = ((5 * n) - (3 * n) - 2 - innerhypens);
 for (int uprows = 1; uprows <= n - 1; uprows++)
 {
     righthyphens = ((5 * n) - (3 * n) - 2 - innerhypens);
