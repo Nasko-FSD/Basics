@@ -1,0 +1,11 @@
+﻿double speed = double.Parse(Console.ReadLine());
+double firstTime = double.Parse(Console.ReadLine()) / 60;
+double secondTime = double.Parse(Console.ReadLine()) / 60;
+double thirdTime = double.Parse(Console.ReadLine()) / 60;
+double speedincrease = speed + (speed * 10 / 100);
+double speeddecrease = speedincrease - (speedincrease * 5 / 100);
+double sumfirst = (speed * firstTime);
+double sumsecond = speedincrease * secondTime;
+double sumthird = speeddecrease * thirdTime;
+double distance = sumfirst + sumsecond + sumthird;
+Console.WriteLine("{0:f2}", distance);
